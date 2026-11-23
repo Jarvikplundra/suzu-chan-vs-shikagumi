@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>スズちゃん vs シカグミ — Suzu-chan vs. the Shika-gumi</title>
+<style>
+  @font-face { font-family: 'Noto Sans JP'; font-weight: 400; src: url('assets/fonts/notojp-400.woff2') format('woff2'); }
+  @font-face { font-family: 'Noto Sans JP'; font-weight: 700; src: url('assets/fonts/notojp-700.woff2') format('woff2'); }
+  @font-face { font-family: 'Noto Sans JP'; font-weight: 900; src: url('assets/fonts/notojp-900.woff2') format('woff2'); }
+  html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    background: #07070d; overflow: hidden;
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Meiryo", sans-serif;
+  }
+  #stage { position: fixed; inset: 0; }
+  #glCanvas, #uiCanvas {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; height: 56.25vw; max-width: 177.78vh; max-height: 100vh;
+    image-rendering: auto;
+  }
+  #boot {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #ffd9a8; background: #07070d; z-index: 10;
+    font-size: clamp(16px, 2.5vw, 28px); letter-spacing: 0.2em;
+    transition: opacity 0.6s ease;
+  }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="glCanvas"></canvas>
+  <canvas id="uiCanvas"></canvas>
+</div>
+<div id="boot">読み込み中… LOADING…</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

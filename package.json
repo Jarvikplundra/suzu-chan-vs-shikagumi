@@ -1,0 +1,12 @@
+{
+  "name": "suzu-vs-shikagumi",
+  "version": "0.1.0",
+  "description": "スズちゃん vs シカグミ — Suzu-chan vs. the Shika-gumi. A 2D anime platformer. Zero dependencies, WebGL2.",
+  "type": "module",
+  "scripts": {
+    "serve": "node serve.js",
+    "test:logic": "node tmp/logic2.mjs"
+  },
+  "license": "MIT",
+  "private": true
+}
